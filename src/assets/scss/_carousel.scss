@@ -1,0 +1,68 @@
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .left-container {
+    top: 50%;
+    position:absolute;
+    left: -5px;
+    transform: translateY(-50%);
+  }
+
+  .right-container {
+    top: 50%;
+    position:absolute;
+    right: -5px;
+    transform: translateY(-50%);
+  }
+
+  .slide-button {
+    height: 30px;
+    opacity: .7;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+      transition: .3s;
+      height: 40px;
+      opacity: .9;
+    }
+  }
+
+  .button-left {
+    content: url("~@/assets/icons/chevron-left.svg");
+  }
+
+  .button-right {
+    content: url("~@/assets/icons/chevron-right.svg");
+  }
+
+  .slide-items {
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+
+  .slide-items::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(187, 187, 187);
+    border-radius: 7px;
+    background-color: #F5F5F5;
+    scroll-behavior: smooth;
+  }
+
+  .slide-items::-webkit-scrollbar{
+    width: 10px;
+    height: 6px;
+	  background-color: #F5F5F5;
+    scroll-behavior: smooth;
+  }
+
+  .slide-items::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+    background-color: #555;
+    border: 2px solid #555555;
+    scroll-behavior: smooth;
+  }
+
+}

@@ -1,0 +1,80 @@
+// Configuration
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "utilities";
+
+// Layout & components
+@import "root";
+@import "reboot";
+@import "grid";
+@import "forms";
+@import "buttons";
+@import "navbar";
+@import "card";
+@import "carousel";
+@import "icons";
+
+// Helpers
+@import "helpers";
+
+// Utilities
+@import "utilities/api";
+// scss-docs-end import-stack
+
+#home {
+    display: flex;
+    min-height: 100vh;
+
+    h1{
+        color: $white;
+    }
+
+    .left-side-section {
+        background-color: $blue;
+        width: 28.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 80px 50px;
+
+        .slogan {
+            color: $white;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .right-side-section {
+        width: 71.5%;
+        flex-direction: column;
+        display: flex;
+        background-color: $white;
+        flex: 1 1 auto;
+    }
+
+    .logout-section {
+        justify-content: flex-end;
+        flex: 0 1 auto;
+        display: flex;
+        padding-top: 2em;
+        padding-right: 2em;
+    }
+
+    .blue-link {
+        text-decoration: none;
+        color: $blue;
+        font-weight: $font-weight-bold;
+        cursor: pointer;
+    }
+
+    .main-section {
+        justify-content: center;
+        flex: 1 1 auto;
+        align-items: center;
+        padding: 1.5em 0;
+    }
+}
